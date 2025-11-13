@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ckfd171g0qi1j"]
+
+[node name="Player" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="MeshInstance2D"]
