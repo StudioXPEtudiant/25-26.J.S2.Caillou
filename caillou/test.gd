@@ -1,1 +1,2 @@
-coucou jaime pas les noirs
+print("hello world")
+
