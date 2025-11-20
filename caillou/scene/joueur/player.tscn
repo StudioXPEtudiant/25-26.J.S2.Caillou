@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckfd171g0qi1j"]
+[gd_scene load_steps=3 format=3 uid="uid://ckfd171g0qi1j"]
 
 [ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
-
-[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_gojf7"]
-
-[sub_resource type="MeshTexture" id="MeshTexture_edqwj"]
-mesh = SubResource("PlaceholderMesh_gojf7")
+[ext_resource type="Texture2D" uid="uid://ccq13jxbutqq1" path="res://texture/jérémi.png" id="3_6jwo4"]
 
 [node name="Player" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("Player")]
 script = ExtResource("1_rmerr")
+Player = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = SubResource("MeshTexture_edqwj")
+position = Vector2(237, 209)
+texture = ExtResource("3_6jwo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

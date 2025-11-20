@@ -1,28 +1,58 @@
-extends CharacterBody2D
+extends Node2D
+
+@export var Player : Node2D
+
+@export var Speed = 100
+@export var RunSpeed = Speed * 2.5
+@export var WalkSpeed = Speed
+
+var WalkUp : bool
+var WalkDown : bool
+var WalkLeft : bool
+var WalkRight : bool
+
+var IsSprinting : bool
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	WalkUp = Input.is_action_pressed("Player_Up")
+	WalkDown = Input.is_action_pressed("Player_Down")
+	WalkLeft = Input.is_action_pressed("Player_Left")
+	WalkRight = Input.is_action_pressed("Player_Right")
+	
+	IsSprinting = Input.is_action_pressed("Player_Sprint")
+	
+	print("-----------")
+	print(WalkUp)
+	print(WalkDown)
+	print(WalkLeft)
+	print(WalkRight)
+	print("-----------")
+	
+	if WalkUp == true :
+		walkUp(delta)
+	if WalkDown == true :
+		walkDown(delta)
+	if WalkLeft == true :
+		walkLeft(delta)
+	if WalkRight == true :
+		walkRight(delta)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+func walkUp(delta) :
+	Player.position.y -= WalkSpeed * delta
 
-	move_and_slide()
+func walkDown(delta) :
+	Player.position.y += WalkSpeed * delta
+
+func walkLeft(delta) :
+	Player.position.x -= WalkSpeed * delta
+
+func walkRight(delta) :
+	Player.position.x += WalkSpeed * delta
