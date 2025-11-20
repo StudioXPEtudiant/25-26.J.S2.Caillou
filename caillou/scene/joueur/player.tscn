@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckfd171g0qi1j"]
+[gd_scene load_steps=4 format=3 uid="uid://ckfd171g0qi1j"]
 
 [ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_7kmpt"]
+[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_gojf7"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_edqwj"]
+mesh = SubResource("PlaceholderMesh_gojf7")
 
 [node name="Player" type="Node2D"]
 
@@ -10,4 +13,4 @@
 script = ExtResource("1_rmerr")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = SubResource("ImageTexture_7kmpt")
+texture = SubResource("MeshTexture_edqwj")
