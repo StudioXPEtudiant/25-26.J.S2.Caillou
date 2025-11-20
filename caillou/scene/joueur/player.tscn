@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://ckfd171g0qi1j"]
+[gd_scene load_steps=2 format=3 uid="uid://ckfd171g0qi1j"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_7kmpt"]
 
 [node name="Player" type="Node2D"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="MeshInstance2D"]
+texture = SubResource("ImageTexture_7kmpt")
