@@ -14,6 +14,16 @@ config/name="caillou"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://scene/": "red",
+"res://scene/décoration/": "teal",
+"res://scene/décoration/tree/": "green",
+"res://scene/niveau/": "green",
+"res://scene/object/": "yellow"
+}
+
 [input]
 
 Player_Up={
