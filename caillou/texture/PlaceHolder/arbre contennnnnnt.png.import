@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccq13jxbutqq1"
-path="res://.godot/imported/jérémi.png-bdf2fbed9994990e3643edafe36dda1a.ctex"
+uid="uid://dl24sdvxn7fhe"
+path="res://.godot/imported/arbre contennnnnnt.png-f644fbd3ea527243e3fefc03b1dacc77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/jérémi.png"
-dest_files=["res://.godot/imported/jérémi.png-bdf2fbed9994990e3643edafe36dda1a.ctex"]
+source_file="res://texture/PlaceHolder/arbre contennnnnnt.png"
+dest_files=["res://.godot/imported/arbre contennnnnnt.png-f644fbd3ea527243e3fefc03b1dacc77.ctex"]
 
 [params]
 

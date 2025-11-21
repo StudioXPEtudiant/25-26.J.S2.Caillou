@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckfd171g0qi1j"]
+[gd_scene load_steps=4 format=3 uid="uid://ckfd171g0qi1j"]
 
 [ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
-[ext_resource type="Texture2D" uid="uid://ccq13jxbutqq1" path="res://texture/jérémi.png" id="3_6jwo4"]
+[ext_resource type="Texture2D" uid="uid://ccq13jxbutqq1" path="res://texture/PlaceHolder/jérémi.png" id="3_6jwo4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igruy"]
+size = Vector2(305, 169)
 
 [node name="Player" type="Node2D"]
 
@@ -14,3 +17,5 @@ position = Vector2(237, 209)
 texture = ExtResource("3_6jwo4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(237.5, 209.5)
+shape = SubResource("RectangleShape2D_igruy")

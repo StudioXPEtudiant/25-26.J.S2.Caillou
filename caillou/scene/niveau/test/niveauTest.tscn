@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d352abataev5e"]
+
+[ext_resource type="PackedScene" uid="uid://ckfd171g0qi1j" path="res://scene/joueur/player.tscn" id="1_35i3e"]
+[ext_resource type="PackedScene" uid="uid://dijr8wd680scd" path="res://scene/décoration/tree/tree.tscn" id="2_jdtrr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_35i3e")]
+position = Vector2(2, 17)
+
+[node name="Tree" parent="." instance=ExtResource("2_jdtrr")]
+position = Vector2(768, 229)

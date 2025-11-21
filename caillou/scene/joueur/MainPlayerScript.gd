@@ -46,13 +46,25 @@ func _process(delta):
 
 
 func walkUp(delta) :
-	Player.position.y -= WalkSpeed * delta
+	if IsSprinting == false :
+		Player.position.y -= WalkSpeed * delta
+	else :
+		Player.position.y -= RunSpeed * delta
 
 func walkDown(delta) :
-	Player.position.y += WalkSpeed * delta
+	if IsSprinting == false :
+		Player.position.y += WalkSpeed * delta
+	else :
+		Player.position.y += RunSpeed * delta
 
 func walkLeft(delta) :
-	Player.position.x -= WalkSpeed * delta
+	if IsSprinting == false :
+		Player.position.x -= WalkSpeed * delta
+	else :
+		Player.position.x -= RunSpeed * delta
 
 func walkRight(delta) :
-	Player.position.x += WalkSpeed * delta
+	if IsSprinting == false :
+		Player.position.x += WalkSpeed * delta
+	else :
+		Player.position.x += RunSpeed * delta
