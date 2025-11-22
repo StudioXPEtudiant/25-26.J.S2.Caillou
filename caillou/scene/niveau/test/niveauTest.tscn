@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d352abataev5e"]
+[gd_scene load_steps=4 format=3 uid="uid://d352abataev5e"]
 
-[ext_resource type="PackedScene" uid="uid://ckfd171g0qi1j" path="res://scene/joueur/player.tscn" id="1_35i3e"]
+[ext_resource type="PackedScene" uid="uid://ckfd171g0qi1j" path="res://scene/joueur/Player.tscn" id="1_35i3e"]
 [ext_resource type="PackedScene" uid="uid://dijr8wd680scd" path="res://scene/décoration/tree/tree.tscn" id="2_jdtrr"]
+[ext_resource type="PackedScene" uid="uid://bm7qa6j4th4hl" path="res://scene/object/hysteria_pillule.tscn" id="3_5cmci"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,3 +11,6 @@ position = Vector2(2, 17)
 
 [node name="Tree" parent="." instance=ExtResource("2_jdtrr")]
 position = Vector2(768, 229)
+
+[node name="HysteriaPillule" parent="." instance=ExtResource("3_5cmci")]
+position = Vector2(500, -28)

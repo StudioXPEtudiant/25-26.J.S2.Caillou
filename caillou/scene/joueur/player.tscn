@@ -6,11 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igruy"]
 size = Vector2(305, 169)
 
-[node name="Player" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("Player")]
+[node name="Player" type="Node2D" node_paths=PackedStringArray("Player")]
 script = ExtResource("1_rmerr")
-Player = NodePath("..")
+Player = NodePath(".")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(237, 209)
@@ -19,3 +19,5 @@ texture = ExtResource("3_6jwo4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(237.5, 209.5)
 shape = SubResource("RectangleShape2D_igruy")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
