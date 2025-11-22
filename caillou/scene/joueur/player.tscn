@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckfd171g0qi1j"]
 
 [ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
-[ext_resource type="Texture2D" uid="uid://ccq13jxbutqq1" path="res://texture/PlaceHolder/jérémi.png" id="3_6jwo4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igruy"]
 size = Vector2(305, 169)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdwb8"]
 
 [node name="Player" type="Node2D" node_paths=PackedStringArray("Player")]
 script = ExtResource("1_rmerr")
@@ -12,10 +13,9 @@ Player = NodePath(".")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(237, 209)
-texture = ExtResource("3_6jwo4")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(237.5, 209.5)
 shape = SubResource("RectangleShape2D_igruy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_bdwb8")
