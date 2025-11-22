@@ -68,7 +68,3 @@ func walkRight(delta) :
 		Player.position.x += WalkSpeed * delta
 	else :
 		Player.position.x += RunSpeed * delta
-
-
-func _on_tree_entered():
-	print("tree entred")
