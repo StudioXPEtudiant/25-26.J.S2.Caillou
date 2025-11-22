@@ -392,3 +392,5 @@ sprite_frames = SubResource("SpriteFrames_dvl7t")
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_3qjkj")
+frame_progress = 0.490998
+speed_scale = 5.0
