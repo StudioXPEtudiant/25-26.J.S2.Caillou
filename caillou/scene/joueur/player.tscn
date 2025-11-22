@@ -145,4 +145,5 @@ shape = SubResource("RectangleShape2D_igruy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_bdwb8")
-frame_progress = 0.760594
+frame_progress = 0.490998
+speed_scale = 5.0
