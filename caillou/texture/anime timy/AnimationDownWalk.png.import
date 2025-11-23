@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byw3ylgohf4du"
-path="res://.godot/imported/timy - marche AR.png-873ece290a8f5fabefae78e67ebc52bf.ctex"
+uid="uid://dhtbad0iwy8hg"
+path="res://.godot/imported/AnimationDownWalk.png-8f5628486530b75bbe4680e90eb32cf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/anime timy/timy - marche AR.png"
-dest_files=["res://.godot/imported/timy - marche AR.png-873ece290a8f5fabefae78e67ebc52bf.ctex"]
+source_file="res://texture/anime timy/AnimationDownWalk.png"
+dest_files=["res://.godot/imported/AnimationDownWalk.png-8f5628486530b75bbe4680e90eb32cf7.ctex"]
 
 [params]
 

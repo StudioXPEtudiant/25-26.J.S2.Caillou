@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd7oqvcqovrvv"
-path="res://.godot/imported/timy droite.png-1f893ea3087fa5ce88211eeb7e31e12b.ctex"
+uid="uid://cuan82b3nmqsi"
+path="res://.godot/imported/AnimationWaiting.png-f44ddbb518e3fd4f471eb1d5928128fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/anime timy/timy droite.png"
-dest_files=["res://.godot/imported/timy droite.png-1f893ea3087fa5ce88211eeb7e31e12b.ctex"]
+source_file="res://texture/anime timy/AnimationWaiting.png"
+dest_files=["res://.godot/imported/AnimationWaiting.png-f44ddbb518e3fd4f471eb1d5928128fd.ctex"]
 
 [params]
 
