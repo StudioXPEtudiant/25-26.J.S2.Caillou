@@ -582,39 +582,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D" node_paths=PackedStringArray("Player")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Player")]
 script = ExtResource("1_rmerr")
 Player = NodePath(".")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(12.5, 887.5)
 shape = SubResource("RectangleShape2D_igruy")
 
-[node name="AnimationUpWalk" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+[node name="AnimationUpWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
 position = Vector2(-12.5, -887.5)
 sprite_frames = SubResource("SpriteFrames_bdwb8")
 frame = 14
 frame_progress = 0.0139848
 
-[node name="AnimationDownWalk" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+[node name="AnimationDownWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
 position = Vector2(-12.5, -887.5)
 sprite_frames = SubResource("SpriteFrames_sj54c")
 
-[node name="AnimationRightWalk" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+[node name="AnimationRightWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
 position = Vector2(-187.5, -887.5)
 sprite_frames = SubResource("SpriteFrames_dvl7t")
 
-[node name="AnimationLeftWalk" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+[node name="AnimationLeftWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
 position = Vector2(189.5, -887.5)
 sprite_frames = SubResource("SpriteFrames_3qjkj")
 
-[node name="AnimationWaiting" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+[node name="AnimationWaiting" type="AnimatedSprite2D" parent="CollisionShape2D"]
 position = Vector2(-12.5, -887.5)
 sprite_frames = SubResource("SpriteFrames_e6t26")
 frame = 9

@@ -16,10 +16,12 @@ var WalkRight : bool
 
 var IsSprinting : bool
 
+var Inventory : bool
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	animation = $CharacterBody2D/CollisionShape2D/AnimationWaiting
+	animation = $CollisionShape2D/AnimationWaiting
 	animation.speed_scale = animationSpeed
 	animation.play()
 
@@ -34,21 +36,88 @@ func _process(delta):
 	
 	IsSprinting = Input.is_action_pressed("Player_Sprint")
 	
+	Inventory = Input.is_action_pressed("Player_Inventory")
+	
 	print("-----------")
+	print(Inventory)
 	print(WalkUp)
 	print(WalkDown)
 	print(WalkLeft)
 	print(WalkRight)
 	print("-----------")
 	
+	if Inventory == true :
+		inventoryOpen()
+	
+	
 	if WalkUp == true :
-		walkUp(delta)
+		if IsSprinting == false :
+			Player.position.y -= WalkSpeed * delta
+			animation.speed_scale = animationSpeed * 5
+		else :
+			Player.position.y -= RunSpeed * delta
+			animation.speed_scale = animationSpeed * 20
+		if animation != find_child("AnimationUpWalk") :
+			animation.stop()
+			animation.hide()
+			animation = find_child("AnimationUpWalk")
+			animation.show()
+			animation.play()
+
 	if WalkDown == true :
-		walkDown(delta)
+		if IsSprinting == false :
+			Player.position.y += WalkSpeed * delta
+			animation.speed_scale = animationSpeed * 5
+		else :
+			Player.position.y += RunSpeed * delta
+			animation.speed_scale = animationSpeed * 20
+		if animation != find_child("AnimationDownWalk") :
+			animation.stop()
+			animation.hide()
+			animation = find_child("AnimationDownWalk")
+			animation.show()
+			animation.play()
+	
 	if WalkLeft == true :
-		walkLeft(delta)
+		if IsSprinting == false :
+			Player.position.x -= WalkSpeed * delta
+			animation.speed_scale = animationSpeed * 3
+		else :
+			Player.position.x -= RunSpeed * delta
+			animation.speed_scale = animationSpeed * 7
+		if animation != find_child("AnimationLeftWalk") :
+			animation.stop()
+			animation.hide()
+			animation = find_child("AnimationLeftWalk")
+			animation.show()
+			animation.play()
+
 	if WalkRight == true :
-		walkRight(delta)
+		if IsSprinting == false :
+			Player.position.x += WalkSpeed * delta
+			animation.speed_scale = animationSpeed * 3
+		else :
+			Player.position.x += RunSpeed * delta
+			animation.speed_scale = animationSpeed * 7
+		if animation != find_child("AnimationRightWalk") :
+			animation.stop()
+			animation.hide()
+			animation = find_child("AnimationRightWalk")
+			animation.show()
+			animation.play()
+	
+	if WalkUp != true && WalkDown != true && WalkLeft != true && WalkRight != true :
+		animation.speed_scale = animationSpeed
+	if animation != find_child("AnimationWaiting") :
+		animation.stop()
+		animation.hide()
+		animation = find_child("AnimationWaiting")
+		animation.show()
+		animation.play()
+
+
+func inventoryOpen() :
+	pass
 
 
 func walkUp(delta) :
@@ -58,12 +127,14 @@ func walkUp(delta) :
 	else :
 		Player.position.y -= RunSpeed * delta
 		animation.speed_scale = animationSpeed * 20
-	if animation != $CharacterBody2D/CollisionShape2D/AnimationUpWalk :
+	if animation != $CollisionShape2D/AnimationUpWalk :
 		animation.stop()
 		animation.hide()
-		animation = $CharacterBody2D/CollisionShape2D/AnimationUpWalk
+		animation = $CollisionShape2D/AnimationUpWalk
 		animation.show()
 		animation.play()
+
+
 
 func walkDown(delta) :
 	if IsSprinting == false :
@@ -72,12 +143,14 @@ func walkDown(delta) :
 	else :
 		Player.position.y += RunSpeed * delta
 		animation.speed_scale = animationSpeed * 20
-	if animation != $CharacterBody2D/CollisionShape2D/AnimationDownWalk :
+	if animation != $CollisionShape2D/AnimationDownWalk :
 		animation.stop()
 		animation.hide()
-		animation = $CharacterBody2D/CollisionShape2D/AnimationDownWalk
+		animation = $CollisionShape2D/AnimationDownWalk
 		animation.show()
 		animation.play()
+
+
 
 func walkLeft(delta) :
 	if IsSprinting == false :
@@ -86,12 +159,13 @@ func walkLeft(delta) :
 	else :
 		Player.position.x -= RunSpeed * delta
 		animation.speed_scale = animationSpeed * 7
-	if animation != $CharacterBody2D/CollisionShape2D/AnimationLeftWalk :
+	if animation != $CollisionShape2D/AnimationLeftWalk :
 		animation.stop()
 		animation.hide()
-		animation = $CharacterBody2D/CollisionShape2D/AnimationLeftWalk
+		animation = $CollisionShape2D/AnimationLeftWalk
 		animation.show()
 		animation.play()
+
 
 func walkRight(delta) :
 	if IsSprinting == false :
@@ -100,9 +174,19 @@ func walkRight(delta) :
 	else :
 		animation.speed_scale = animationSpeed * 7
 		Player.position.x += RunSpeed * delta
-	if animation != $CharacterBody2D/CollisionShape2D/AnimationRightWalk :
+	if animation != $CollisionShape2D/AnimationRightWalk :
 		animation.stop()
 		animation.hide()
-		animation = $CharacterBody2D/CollisionShape2D/AnimationRightWalk
+		animation = $CollisionShape2D/AnimationRightWalk
+		animation.show()
+		animation.play()
+
+
+func dontwalk() :
+	animation.speed_scale = animationSpeed
+	if animation != $CollisionShape2D/AnimationWaiting :
+		animation.stop()
+		animation.hide()
+		animation = $CollisionShape2D/AnimationWaiting
 		animation.show()
 		animation.play()
