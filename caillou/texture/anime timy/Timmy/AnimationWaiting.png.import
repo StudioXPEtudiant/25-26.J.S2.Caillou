@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhtbad0iwy8hg"
-path="res://.godot/imported/AnimationDownWalk.png-8f5628486530b75bbe4680e90eb32cf7.ctex"
+uid="uid://cuan82b3nmqsi"
+path="res://.godot/imported/AnimationWaiting.png-9e1ee20dd28d1374854891478afa9fee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/anime timy/AnimationDownWalk.png"
-dest_files=["res://.godot/imported/AnimationDownWalk.png-8f5628486530b75bbe4680e90eb32cf7.ctex"]
+source_file="res://texture/anime timy/Timmy/AnimationWaiting.png"
+dest_files=["res://.godot/imported/AnimationWaiting.png-9e1ee20dd28d1374854891478afa9fee.ctex"]
 
 [params]
 

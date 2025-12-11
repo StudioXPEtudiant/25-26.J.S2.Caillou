@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://pl3pvu4j8cd1"]
 
 [sub_resource type="TileSet" id="TileSet_qb68r"]
+terrain_set_0/mode = 0
 
 [node name="TileCentral1" type="Node2D"]
 

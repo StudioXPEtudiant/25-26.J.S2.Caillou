@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd7oqvcqovrvv"
-path="res://.godot/imported/AnimationRightWalk.png-263918f0ae08cdcac00def48547a6e4b.ctex"
+path="res://.godot/imported/AnimationRightWalk.png-554c439e3aeb354187e15d701ffc1370.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/anime timy/AnimationRightWalk.png"
-dest_files=["res://.godot/imported/AnimationRightWalk.png-263918f0ae08cdcac00def48547a6e4b.ctex"]
+source_file="res://texture/anime timy/Timmy/AnimationRightWalk.png"
+dest_files=["res://.godot/imported/AnimationRightWalk.png-554c439e3aeb354187e15d701ffc1370.ctex"]
 
 [params]
 
