@@ -57,10 +57,10 @@ func _process(delta):
 	
 	if WalkUp == true :
 		if IsSprinting == false :
-			Player.position.y -= WalkSpeed * delta
+			Player.velocity.y -= WalkSpeed * delta
 			animation.speed_scale = animationSpeed * 5
 		else :
-			Player.position.y -= RunSpeed * delta
+			Player.velocity.y -= RunSpeed * delta
 			animation.speed_scale = animationSpeed * 20
 		if animation != find_child("AnimationUpWalk") :
 			animation.stop()
