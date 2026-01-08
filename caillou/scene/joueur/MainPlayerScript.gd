@@ -57,10 +57,14 @@ func _process(delta):
 	
 	if WalkUp == true :
 		if IsSprinting == false :
-			Player.velocity.y -= WalkSpeed * delta
+			Player.velocity.y = -WalkSpeed * delta
+			Player.position.y -= Player.velocity.y
+			Player.velocity.y = 0
 			animation.speed_scale = animationSpeed * 5
 		else :
-			Player.velocity.y -= RunSpeed * delta
+			Player.velocity.y = -RunSpeed * delta
+			Player.position.y -= Player.velocity.y
+			Player.velocity.y = 0
 			animation.speed_scale = animationSpeed * 20
 		if animation != find_child("AnimationUpWalk") :
 			animation.stop()
@@ -71,10 +75,14 @@ func _process(delta):
 	#////////
 	if WalkDown == true :
 		if IsSprinting == false :
-			Player.velocity.y += WalkSpeed * delta
+			Player.velocity.y = WalkSpeed * delta
+			Player.position.y += Player.velocity.y
+			Player.velocity.y = 0
 			animation.speed_scale = animationSpeed * 5
 		else :
-			Player.velocity.y += RunSpeed * delta
+			Player.velocity.y = RunSpeed * delta
+			Player.position.y += Player.velocity.y
+			Player.velocity.y = 0
 			animation.speed_scale = animationSpeed * 20
 		if animation != find_child("AnimationDownWalk") :
 			animation.stop()
@@ -85,10 +93,14 @@ func _process(delta):
 	#////////
 	if WalkLeft == true :
 		if IsSprinting == false :
-			Player.velocity.x -= WalkSpeed * delta
+			Player.velocity.x = -WalkSpeed * delta
+			Player.position.x -= Player.velocity.x
+			Player.velocity.x = 0
 			animation.speed_scale = animationSpeed * 3
 		else :
-			Player.velocity.x -= RunSpeed * delta
+			Player.velocity.x = -RunSpeed * delta
+			Player.position.x -= Player.velocity.x
+			Player.velocity.x = 0
 			animation.speed_scale = animationSpeed * 7
 		if animation != find_child("AnimationLeftWalk") :
 			animation.stop()
@@ -99,10 +111,14 @@ func _process(delta):
 	#////////
 	if WalkRight == true :
 		if IsSprinting == false :
-			Player.position.x += WalkSpeed * delta
+			Player.velocity.x = WalkSpeed * delta
+			Player.position.x += Player.velocity.x
+			Player.velocity.x = 0
 			animation.speed_scale = animationSpeed * 3
 		else :
-			Player.position.x += RunSpeed * delta
+			Player.velocity.x = RunSpeed * delta
+			Player.position.x += Player.velocity.x
+			Player.velocity.x = 0
 			animation.speed_scale = animationSpeed * 7
 		if animation != find_child("AnimationRightWalk") :
 			animation.stop()
