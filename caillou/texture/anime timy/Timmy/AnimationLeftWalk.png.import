@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byw3ylgohf4du"
-path="res://.godot/imported/AnimationUpWalk.png-679a64403e3033757a79b89b1db317a3.ctex"
+uid="uid://dei7ry1byik2w"
+path="res://.godot/imported/AnimationLeftWalk.png-db6b922b11fd157c3ca8ee2215a879f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/anime timy/AnimationUpWalk.png"
-dest_files=["res://.godot/imported/AnimationUpWalk.png-679a64403e3033757a79b89b1db317a3.ctex"]
+source_file="res://texture/anime timy/Timmy/AnimationLeftWalk.png"
+dest_files=["res://.godot/imported/AnimationLeftWalk.png-db6b922b11fd157c3ca8ee2215a879f4.ctex"]
 
 [params]
 
