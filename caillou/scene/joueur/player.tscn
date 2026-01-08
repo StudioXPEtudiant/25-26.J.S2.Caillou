@@ -1,10 +1,6 @@
 [gd_scene load_steps=85 format=3 uid="uid://ckfd171g0qi1j"]
 
 [ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
-[ext_resource type="Texture2D" uid="uid://byw3ylgohf4du" path="res://texture/anime timy/Timmy/AnimationUpWalk.png" id="2_wagjv"]
-[ext_resource type="Texture2D" uid="uid://dhtbad0iwy8hg" path="res://texture/anime timy/Timmy/AnimationDownWalk.png" id="3_ggbmx"]
-[ext_resource type="Texture2D" uid="uid://cd7oqvcqovrvv" path="res://texture/anime timy/Timmy/AnimationRightWalk.png" id="4_bu200"]
-[ext_resource type="Texture2D" uid="uid://dei7ry1byik2w" path="res://texture/anime timy/Timmy/AnimationLeftWalk.png" id="5_vkira"]
 [ext_resource type="Texture2D" uid="uid://cuan82b3nmqsi" path="res://texture/anime timy/Timmy/AnimationWaiting.png" id="6_5kvxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igruy"]

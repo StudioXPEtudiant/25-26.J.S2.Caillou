@@ -41,12 +41,12 @@ func _process(delta):
 	
 	#-------------------------------------------------
 	print("-----------")
-	print("inventory ", Inventory)
-	print("up ", WalkUp)
-	print("down ", WalkDown)
-	print("left ", WalkLeft)
-	print("right ", WalkRight)
-	print("sprint ", IsSprinting)
+	print("inventory : ", Inventory)
+	print("up : ", WalkUp)
+	print("down : ", WalkDown)
+	print("left : ", WalkLeft)
+	print("right : ", WalkRight)
+	print("sprint : ", IsSprinting)
 	print("-----------")
 	#-------------------------------------------------
 	
@@ -71,10 +71,10 @@ func _process(delta):
 	#////////
 	if WalkDown == true :
 		if IsSprinting == false :
-			Player.position.y += WalkSpeed * delta
+			Player.velocity.y += WalkSpeed * delta
 			animation.speed_scale = animationSpeed * 5
 		else :
-			Player.position.y += RunSpeed * delta
+			Player.velocity.y += RunSpeed * delta
 			animation.speed_scale = animationSpeed * 20
 		if animation != find_child("AnimationDownWalk") :
 			animation.stop()
@@ -85,10 +85,10 @@ func _process(delta):
 	#////////
 	if WalkLeft == true :
 		if IsSprinting == false :
-			Player.position.x -= WalkSpeed * delta
+			Player.velocity.x -= WalkSpeed * delta
 			animation.speed_scale = animationSpeed * 3
 		else :
-			Player.position.x -= RunSpeed * delta
+			Player.velocity.x -= RunSpeed * delta
 			animation.speed_scale = animationSpeed * 7
 		if animation != find_child("AnimationLeftWalk") :
 			animation.stop()
