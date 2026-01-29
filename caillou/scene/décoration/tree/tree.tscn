@@ -1,12 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dijr8wd680scd"]
+[gd_scene load_steps=3 format=3 uid="uid://dijr8wd680scd"]
+
+[ext_resource type="Texture2D" uid="uid://cip6w3c3jpdoj" path="res://texture/tree/caillou texture.png" id="1_gqy5f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co2u5"]
-size = Vector2(184.5, 248.1)
+size = Vector2(21, 34)
 
 [node name="Tree" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-32.2, 912.5)
+position = Vector2(-4.5, 149)
 shape = SubResource("RectangleShape2D_co2u5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gqy5f")
