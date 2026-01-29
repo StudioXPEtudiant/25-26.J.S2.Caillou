@@ -22,6 +22,7 @@ folder_colors={
 "res://scene/décoration/": "teal",
 "res://scene/décoration/tree/": "green",
 "res://scene/niveau/": "green",
+"res://scene/niveau/menu/": "purple",
 "res://scene/niveau/test/": "gray",
 "res://scene/object/": "yellow",
 "res://texture/": "purple",

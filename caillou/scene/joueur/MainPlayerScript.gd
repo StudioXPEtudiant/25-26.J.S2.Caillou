@@ -1,18 +1,18 @@
-extends Node2D
+extends CharacterBody2D
 
 @export var Player : Node2D
 
-@export var Speed = 100
-@export var RunSpeed = Speed * 2.5
-@export var WalkSpeed = Speed
+@export var Speed = 50
+@export var ActualSpeed = Speed
+@export var RunFactor = 2
+
 
 var animation
-var animationSpeed = Speed / 100
+var animationSpeed : float
 
-var WalkUp : bool
-var WalkDown : bool
-var WalkLeft : bool
-var WalkRight : bool
+var WalkY : float
+var WalkX : float
+var newVel : Vector2
 
 var IsSprinting : bool
 
@@ -28,12 +28,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
+	ActualSpeed = Speed
 	#variable touche actualisation
-	WalkUp = Input.is_action_pressed("Player_Up")
-	WalkDown = Input.is_action_pressed("Player_Down")
-	WalkLeft = Input.is_action_pressed("Player_Left")
-	WalkRight = Input.is_action_pressed("Player_Right")
+	WalkY = -Input.get_axis("Player_Down","Player_Up") * ActualSpeed
+	WalkX = Input.get_axis("Player_Left","Player_Right") * ActualSpeed
 	
 	IsSprinting = Input.is_action_pressed("Player_Sprint")
 	
@@ -42,11 +41,10 @@ func _process(delta):
 	#-------------------------------------------------
 	print("-----------")
 	print("inventory : ", Inventory)
-	print("up : ", WalkUp)
-	print("down : ", WalkDown)
-	print("left : ", WalkLeft)
-	print("right : ", WalkRight)
+	print("walkY : ", WalkY)
+	print("walkX : ", WalkX)
 	print("sprint : ", IsSprinting)
+	print("animationSpeed : ",animationSpeed)
 	print("-----------")
 	#-------------------------------------------------
 	
@@ -55,17 +53,24 @@ func _process(delta):
 	
 	#-------------------------------------------------
 	
-	if WalkUp == true :
-		if IsSprinting == false :
-			Player.velocity.y = -WalkSpeed * delta
-			Player.position.y -= Player.velocity.y
-			Player.velocity.y = 0
-			animation.speed_scale = animationSpeed * 5
-		else :
-			Player.velocity.y = -RunSpeed * delta
-			Player.position.y -= Player.velocity.y
-			Player.velocity.y = 0
-			animation.speed_scale = animationSpeed * 20
+	newVel = Vector2(WalkX,WalkY)
+	
+	if IsSprinting == true :
+		ActualSpeed *= RunFactor
+		newVel *= ActualSpeed
+	else :
+		newVel *= ActualSpeed
+	
+	velocity = newVel
+	move_and_slide()
+	
+	animationSpeed = ActualSpeed / 100
+	if animationSpeed == 0 :
+		animationSpeed += 0.5
+	
+	#////////
+	if velocity.y < 0 :
+		animation.speed_scale = animationSpeed * 20
 		if animation != find_child("AnimationUpWalk") :
 			animation.stop()
 			animation.hide()
@@ -73,17 +78,8 @@ func _process(delta):
 			animation.show()
 			animation.play()
 	#////////
-	if WalkDown == true :
-		if IsSprinting == false :
-			Player.velocity.y = WalkSpeed * delta
-			Player.position.y += Player.velocity.y
-			Player.velocity.y = 0
-			animation.speed_scale = animationSpeed * 5
-		else :
-			Player.velocity.y = RunSpeed * delta
-			Player.position.y += Player.velocity.y
-			Player.velocity.y = 0
-			animation.speed_scale = animationSpeed * 20
+	if velocity.y > 0 :
+		animation.speed_scale = animationSpeed * 20
 		if animation != find_child("AnimationDownWalk") :
 			animation.stop()
 			animation.hide()
@@ -91,35 +87,8 @@ func _process(delta):
 			animation.show()
 			animation.play()
 	#////////
-	if WalkLeft == true :
-		if IsSprinting == false :
-			Player.velocity.x = -WalkSpeed * delta
-			Player.position.x -= Player.velocity.x
-			Player.velocity.x = 0
-			animation.speed_scale = animationSpeed * 3
-		else :
-			Player.velocity.x = -RunSpeed * delta
-			Player.position.x -= Player.velocity.x
-			Player.velocity.x = 0
-			animation.speed_scale = animationSpeed * 7
-		if animation != find_child("AnimationLeftWalk") :
-			animation.stop()
-			animation.hide()
-			animation = find_child("AnimationLeftWalk")
-			animation.show()
-			animation.play()
-	#////////
-	if WalkRight == true :
-		if IsSprinting == false :
-			Player.velocity.x = WalkSpeed * delta
-			Player.position.x += Player.velocity.x
-			Player.velocity.x = 0
-			animation.speed_scale = animationSpeed * 3
-		else :
-			Player.velocity.x = RunSpeed * delta
-			Player.position.x += Player.velocity.x
-			Player.velocity.x = 0
-			animation.speed_scale = animationSpeed * 7
+	if velocity.x > 0 :
+		animation.speed_scale = animationSpeed * 7
 		if animation != find_child("AnimationRightWalk") :
 			animation.stop()
 			animation.hide()
@@ -127,8 +96,17 @@ func _process(delta):
 			animation.show()
 			animation.play()
 	#////////
-	if WalkUp != true && WalkDown != true && WalkLeft != true && WalkRight != true :
-		animation.speed_scale = animationSpeed
+	if velocity.x < 0 :
+		animation.speed_scale = animationSpeed * 7
+		if animation != find_child("AnimationLeftWalk") :
+			animation.stop()
+			animation.hide()
+			animation = find_child("AnimationLeftWalk")
+			animation.show()
+			animation.play()
+	#////////
+	if velocity.x == 0 && velocity.y == 0 :
+		animation.speed_scale = 1
 		if animation != find_child("AnimationWaiting") :
 			animation.stop()
 			animation.hide()
@@ -139,3 +117,6 @@ func _process(delta):
 
 func inventoryOpen() :
 	pass
+
+
+

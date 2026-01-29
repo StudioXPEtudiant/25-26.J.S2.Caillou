@@ -1,13 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm7qa6j4th4hl"]
+[gd_scene load_steps=3 format=3 uid="uid://bm7qa6j4th4hl"]
 
 [ext_resource type="Texture2D" uid="uid://crfok25v4k6g0" path="res://texture/PlaceHolder/houstouria_Pilloule.png" id="1_2d2d2"]
-[ext_resource type="Script" path="res://scene/object/objectScript.gd" id="1_07tsg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fffy"]
 size = Vector2(307, 169)
 
 [node name="HysteriaPillule" type="Node2D"]
-script = ExtResource("1_07tsg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

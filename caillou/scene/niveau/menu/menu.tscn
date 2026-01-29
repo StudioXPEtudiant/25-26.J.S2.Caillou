@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://uxeclw4jp1d1"]
+
+[ext_resource type="Script" path="res://scene/niveau/menu/menuButtonScript.gd" id="1_x7tgc"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="menu_button_play" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_x7tgc")
