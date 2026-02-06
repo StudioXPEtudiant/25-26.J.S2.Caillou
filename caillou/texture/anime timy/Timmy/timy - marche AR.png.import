@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i7rr81lrreap"
-path="res://.godot/imported/texture.png-02518fccc0c7f10ad705d5dc6f052b3c.ctex"
+uid="uid://ddelwwp6yt8b1"
+path="res://.godot/imported/timy - marche AR.png-92daa8fe89032db37001e8040134dacc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/materuo/texture.png"
-dest_files=["res://.godot/imported/texture.png-02518fccc0c7f10ad705d5dc6f052b3c.ctex"]
+source_file="res://texture/anime timy/Timmy/timy - marche AR.png"
+dest_files=["res://.godot/imported/timy - marche AR.png-92daa8fe89032db37001e8040134dacc.ctex"]
 
 [params]
 

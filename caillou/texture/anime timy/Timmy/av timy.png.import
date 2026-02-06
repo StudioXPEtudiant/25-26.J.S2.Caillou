@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i7rr81lrreap"
-path="res://.godot/imported/texture.png-02518fccc0c7f10ad705d5dc6f052b3c.ctex"
+uid="uid://dommsritgwt0g"
+path="res://.godot/imported/av timy.png-066853d0c32919d8b8ca7107d05626ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/materuo/texture.png"
-dest_files=["res://.godot/imported/texture.png-02518fccc0c7f10ad705d5dc6f052b3c.ctex"]
+source_file="res://texture/anime timy/Timmy/av timy.png"
+dest_files=["res://.godot/imported/av timy.png-066853d0c32919d8b8ca7107d05626ea.ctex"]
 
 [params]
 

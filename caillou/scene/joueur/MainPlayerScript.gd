@@ -117,6 +117,3 @@ func _physics_process(delta):
 
 func inventoryOpen() :
 	pass
-
-
-
