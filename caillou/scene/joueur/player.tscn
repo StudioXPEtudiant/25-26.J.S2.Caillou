@@ -1,6 +1,6 @@
-[gd_scene load_steps=89 format=3 uid="uid://cc5fgi14fm4g"]
+[gd_scene load_steps=89 format=3 uid="uid://ckfd171g0qi1j"]
 
-[ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
+[ext_resource type="Script" uid="uid://c6d0aibkxs3ud" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
 [ext_resource type="Texture2D" uid="uid://ddelwwp6yt8b1" path="res://texture/anime timy/Timmy/AnimationUpWalk.png" id="2_oxe67"]
 [ext_resource type="Texture2D" uid="uid://dommsritgwt0g" path="res://texture/anime timy/Timmy/AnimationDownWalk.png" id="3_6fd3y"]
 [ext_resource type="Texture2D" uid="uid://ds4bvj3noc4kg" path="res://texture/anime timy/Timmy/AnimationRightWalk.png" id="4_quchp"]

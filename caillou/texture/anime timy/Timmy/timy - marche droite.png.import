@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds4bvj3noc4kg"
-path="res://.godot/imported/AnimationRightWalk.png-554c439e3aeb354187e15d701ffc1370.ctex"
+uid="uid://cerimsgbpke3b"
+path="res://.godot/imported/timy - marche droite.png-ebb530e33c39d4c44324bc544dd13d77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/anime timy/Timmy/AnimationRightWalk.png"
-dest_files=["res://.godot/imported/AnimationRightWalk.png-554c439e3aeb354187e15d701ffc1370.ctex"]
+source_file="res://texture/anime timy/Timmy/timy - marche droite.png"
+dest_files=["res://.godot/imported/timy - marche droite.png-ebb530e33c39d4c44324bc544dd13d77.ctex"]
 
 [params]
 
