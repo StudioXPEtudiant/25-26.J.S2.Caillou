@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 @export var Player : Node2D
 
-@export var Speed = 50
+@export var Speed = 10
 @export var ActualSpeed = Speed
-@export var RunFactor = 2
+@export var RunFactor = 2.5
 
 
 var animation
@@ -40,12 +40,18 @@ func _physics_process(delta):
 	
 	#-------------------------------------------------
 	print("-----------")
+	print()
 	print("inventory : ", Inventory)
+	print()
 	print("walkY : ", WalkY)
 	print("walkX : ", WalkX)
+	print()
+	print("speed : ", Speed)
+	print("actual speed : ", ActualSpeed)
+	print ("run factor : ", RunFactor)
 	print("sprint : ", IsSprinting)
 	print("animationSpeed : ",animationSpeed)
-	print("-----------")
+	print()
 	#-------------------------------------------------
 	
 	if Inventory == true :
@@ -64,7 +70,7 @@ func _physics_process(delta):
 	velocity = newVel
 	move_and_slide()
 	
-	animationSpeed = ActualSpeed / 100
+	animationSpeed = ActualSpeed / 40
 	if animationSpeed == 0 :
 		animationSpeed += 0.5
 	
