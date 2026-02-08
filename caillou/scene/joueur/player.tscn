@@ -1,6 +1,6 @@
 [gd_scene load_steps=95 format=3 uid="uid://ckfd171g0qi1j"]
 
-[ext_resource type="Script" uid="uid://c6d0aibkxs3ud" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
+[ext_resource type="Script" path="res://scene/joueur/MainPlayerScript.gd" id="1_rmerr"]
 [ext_resource type="Texture2D" uid="uid://ddelwwp6yt8b1" path="res://texture/anime timy/Timmy/AnimationUpWalk.png" id="2_oxe67"]
 [ext_resource type="Texture2D" uid="uid://dommsritgwt0g" path="res://texture/anime timy/Timmy/AnimationDownWalk.png" id="3_6fd3y"]
 [ext_resource type="Texture2D" uid="uid://cerimsgbpke3b" path="res://texture/anime timy/Timmy/AnimationRightWalk.png" id="4_quchp"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cuan82b3nmqsi" path="res://texture/anime timy/Timmy/AnimationWaiting.png" id="6_5kvxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igruy"]
-size = Vector2(29, 53)
+size = Vector2(29, 14.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1t3o3"]
 atlas = ExtResource("2_oxe67")
@@ -629,37 +629,37 @@ script = ExtResource("1_rmerr")
 Player = NodePath(".")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 37)
+position = Vector2(1, 56.25)
 shape = SubResource("RectangleShape2D_igruy")
 
 [node name="AnimationUpWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
-position = Vector2(-1, -37)
+position = Vector2(-1, -56.25)
 sprite_frames = SubResource("SpriteFrames_bdwb8")
 frame_progress = 0.0139848
 
 [node name="AnimationDownWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
-position = Vector2(-1, -37)
+position = Vector2(-1, -56.25)
 sprite_frames = SubResource("SpriteFrames_sj54c")
 
 [node name="AnimationRightWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
-position = Vector2(6, -37)
+position = Vector2(6, -56.25)
 sprite_frames = SubResource("SpriteFrames_dvl7t")
 
 [node name="AnimationLeftWalk" type="AnimatedSprite2D" parent="CollisionShape2D"]
 visible = false
-position = Vector2(6, -37)
+position = Vector2(6, -56.25)
 sprite_frames = SubResource("SpriteFrames_3qjkj")
 
 [node name="AnimationWaiting" type="AnimatedSprite2D" parent="CollisionShape2D"]
-position = Vector2(-1, -37)
+position = Vector2(-1, -56.25)
 sprite_frames = SubResource("SpriteFrames_e6t26")
 frame = 9
 frame_progress = 0.70547
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1, 40.000004)
+position = Vector2(1, 40)
 scale = Vector2(8.08, 11.88)
 zoom = Vector2(3.645, 3.645)
