@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtttymsvkrv1d"
-path="res://.godot/imported/grass_transition.png-3d9c0f757542bf1e5c827e1bd34da2c9.ctex"
+uid="uid://dd8sfv3ja7lf6"
+path="res://.godot/imported/shop.png-f6aaf41cc93749f2868eff76c0ab2061.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/materuo/grass_transition.png"
-dest_files=["res://.godot/imported/grass_transition.png-3d9c0f757542bf1e5c827e1bd34da2c9.ctex"]
+source_file="res://texture/materuo/shop.png"
+dest_files=["res://.godot/imported/shop.png-f6aaf41cc93749f2868eff76c0ab2061.ctex"]
 
 [params]
 
