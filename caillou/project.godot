@@ -24,6 +24,8 @@ folder_colors={
 "res://scene/niveau/": "green",
 "res://scene/niveau/menu/": "purple",
 "res://scene/niveau/test/": "gray",
+"res://scene/niveau/tiles/template/": "pink",
+"res://scene/niveau/tiles/world/": "purple",
 "res://scene/object/": "yellow",
 "res://texture/": "purple",
 "res://texture/PlaceHolder/": "gray"

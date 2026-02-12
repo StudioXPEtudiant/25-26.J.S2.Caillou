@@ -5,14 +5,11 @@ var tilemapType = "NA"
 #template : erreur
 #normal : tilemap normal
 
-var path_UL = 0
-var path_U = 0
-var path_UR = 0
-var path_R = 0
-var path_DR =0
-var path_D = 0
-var path_DL = 0
-var path_L = 0
+var path_U = Vector3(0, 0, 0)
+var path_R = Vector3(0, 0, 0)
+var path_D = Vector3(0, 0, 0)
+var path_L = Vector3(0, 0, 0)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -42,30 +39,47 @@ func pathGiving():
 	
 	if tilemapType == "normal" :
 		
-		#path UL
-		if name == "" :
-			path_UL == 1
 		#path U
 		if name == "" :
-			path_U == 1
-		#path UR
+			path_U.x == 1
 		if name == "" :
-			path_UR == 1
+			path_U.y == 1
+		if name == "" :
+			path_U.z == 1
 		#path R
 		if name == "" :
-			path_R == 1
-		#path DR
+			path_R.x == 1
 		if name == "" :
-			path_DR == 1
+			path_R.y == 1
+		if name == "" :
+			path_R.z == 1
 		#path D
 		if name == "" :
-			path_D == 1
-		#path DL
+			path_D.x == 1
 		if name == "" :
-			path_DL == 1
+			path_D.y == 1
+		if name == "" :
+			path_D.z == 1
 		#path L
 		if name == "" :
-			path_L == 1
+			path_L.x == 1
+		if name == "" :
+			path_L.y == 1
+		if name == "" :
+			path_L.z == 1
+		
+		#print("")
+		#print("path :")
+		#print("path UL : ", path_Ul)
+		#print("path U : ", path_U)
+		#print("path UR : ", path_Ur)
+		#print("path R : ", path_R)
+		#print("path DR : ", path_Dr)
+		#print("path D : ", path_D)
+		#print("path DL : ", path_Dl)
+		#print("path L : ", path_L)
+		#print("")
+	
 
 
 
