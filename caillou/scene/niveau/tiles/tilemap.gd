@@ -5,14 +5,14 @@ var tilemapType = "NA"
 #template : erreur
 #normal : tilemap normal
 
-var path_UL
-var path_U
-var path_UR
-var path_R
-var path_DR
-var path_D
-var path_DL
-var path_L
+var path_UL = 0
+var path_U = 0
+var path_UR = 0
+var path_R = 0
+var path_DR =0
+var path_D = 0
+var path_DL = 0
+var path_L = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,3 +45,32 @@ func pathGiving():
 		#path UL
 		if name == "" :
 			path_UL == 1
+		#path U
+		if name == "" :
+			path_U == 1
+		#path UR
+		if name == "" :
+			path_UR == 1
+		#path R
+		if name == "" :
+			path_R == 1
+		#path DR
+		if name == "" :
+			path_DR == 1
+		#path D
+		if name == "" :
+			path_D == 1
+		#path DL
+		if name == "" :
+			path_DL == 1
+		#path L
+		if name == "" :
+			path_L == 1
+
+
+
+
+
+
+
+
