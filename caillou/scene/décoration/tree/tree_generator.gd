@@ -2,6 +2,7 @@ extends Node2D
 
 var rng = RandomNumberGenerator.new()
 var texture = 0
+var Stexture = "NA"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +17,7 @@ func _process(delta):
 
 func tree_generating():
 	if texture == 0 :
-		texture = rng.randi_range(1, 5)
+		texture = rng.randi_range(1, 1)
 		print ("texture généré : ", texture)
 	if texture == 0 :
 		print("texture non généré")
@@ -24,4 +25,5 @@ func tree_generating():
 
 func tree_texturing():
 	if texture == 1 :
-		pass
+		Stexture = "arbre1"
+	find_child(Stexture).show()

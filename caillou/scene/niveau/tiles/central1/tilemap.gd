@@ -25,8 +25,6 @@ func tilemapTypeGiving():
 	if tilemapType == "NA" :
 		if name == "template" :
 			tilemapType = "template"
-		if name == "central1" :
-			tilemapType = "normal"
 	if tilemapType == "NA" :
 		print("tylemap type non donné")
 	else :
