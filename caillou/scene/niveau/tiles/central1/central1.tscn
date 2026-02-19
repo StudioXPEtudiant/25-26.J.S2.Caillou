@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3orkrwdxx6b3"]
+[gd_scene load_steps=8 format=3 uid="uid://c3orkrwdxx6b3"]
 
 [ext_resource type="Script" path="res://scene/niveau/tiles/template/tilemap.gd" id="1_diup3"]
 [ext_resource type="Texture2D" uid="uid://dtttymsvkrv1d" path="res://texture/materuo/grass_transition.png" id="2_hxccr"]
 [ext_resource type="Texture2D" uid="uid://bab2gsotfw1ny" path="res://texture/materuo/materiaux_de_base.png" id="3_bs462"]
 [ext_resource type="PackedScene" uid="uid://dijr8wd680scd" path="res://scene/décoration/tree/tree.tscn" id="4_bnfo4"]
-[ext_resource type="PackedScene" uid="uid://ckfd171g0qi1j" path="res://scene/joueur/player.tscn" id="5_2urj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2cn2"]
 texture = ExtResource("2_hxccr")
@@ -69,7 +68,7 @@ terrain_set_0/mode = 0
 sources/1 = SubResource("TileSetAtlasSource_up7ia")
 sources/0 = SubResource("TileSetAtlasSource_h2cn2")
 
-[node name="template" type="Node2D"]
+[node name="central1" type="Node2D"]
 script = ExtResource("1_diup3")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -80,9 +79,39 @@ layer_0/tile_data = PackedInt32Array(-21, 1, 1, -65516, 1, 1, -1376256, 1, 1, 13
 layer_1/name = "grass layer"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Player" parent="." instance=ExtResource("5_2urj6")]
-
 [node name="tree" type="Node2D" parent="."]
+
+[node name="pack2" type="Node2D" parent="tree"]
+
+[node name="Tree9" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(322, -234)
+
+[node name="Tree10" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(433, -196)
+
+[node name="Tree11" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(528, -164)
+
+[node name="Tree6" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(355, -148)
+
+[node name="Tree3" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(579, -102)
+
+[node name="Tree" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(465, -107)
+
+[node name="Tree4" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(397, -83)
+
+[node name="Tree7" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(317, -77)
+
+[node name="Tree8" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(638, -72)
+
+[node name="Tree2" parent="tree/pack2" instance=ExtResource("4_bnfo4")]
+position = Vector2(512, -41)
 
 [node name="pack1" type="Node2D" parent="tree"]
 

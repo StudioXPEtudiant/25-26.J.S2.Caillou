@@ -27,3 +27,4 @@ func tree_texturing():
 	if texture == 1 :
 		Stexture = "arbre1"
 	find_child(Stexture).show()
+

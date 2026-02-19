@@ -23,10 +23,12 @@ shape = SubResource("RectangleShape2D_co2u5")
 [node name="arbre1" type="Sprite2D" parent="."]
 position = Vector2(195, -190)
 texture = ExtResource("1_mxl2q")
+script = ExtResource("3_cg5fn")
 
 [node name="visibilityArea" type="Area2D" parent="."]
-script = ExtResource("3_cg5fn")
 
 [node name="areaCollision" type="CollisionShape2D" parent="visibilityArea"]
 position = Vector2(0, -180)
 shape = SubResource("CapsuleShape2D_gfdfw")
+
+[connection signal="body_entered" from="visibilityArea" to="arbre1" method="visibility"]
