@@ -18,7 +18,7 @@ func _process(delta):
 func tree_generating():
 	if texture == 0 :
 		texture = rng.randi_range(1, 1)
-		print ("texture généré : ", texture)
+	#	print ("texture généré : ", texture)
 	if texture == 0 :
 		print("texture non généré")
 

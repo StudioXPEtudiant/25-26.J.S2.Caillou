@@ -39,19 +39,19 @@ func _physics_process(delta):
 	Inventory = Input.is_action_pressed("Player_Inventory")
 	
 	#-------------------------------------------------
-	print("-----------")
-	print()
-	print("inventory : ", Inventory)
-	print()
-	print("walkY : ", WalkY)
-	print("walkX : ", WalkX)
-	print()
-	print("speed : ", Speed)
-	print("actual speed : ", ActualSpeed)
-	print ("run factor : ", RunFactor)
-	print("sprint : ", IsSprinting)
-	print("animationSpeed : ",animationSpeed)
-	print()
+	#print("-----------")
+	#print()
+	#print("inventory : ", Inventory)
+	#print()
+	#print("walkY : ", WalkY)
+	#print("walkX : ", WalkX)
+	#print()
+	#print("speed : ", Speed)
+	#print("actual speed : ", ActualSpeed)
+	#print ("run factor : ", RunFactor)
+	#print("sprint : ", IsSprinting)
+	#print("animationSpeed : ",animationSpeed)
+	#print()
 	#-------------------------------------------------
 	
 	if Inventory == true :
