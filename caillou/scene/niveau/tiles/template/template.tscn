@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" path="res://scene/niveau/tiles/template/tilemap.gd" id="1_pdvxl"]
 [ext_resource type="Texture2D" uid="uid://bab2gsotfw1ny" path="res://texture/materuo/materiaux_de_base.png" id="2_apl2y"]
-[ext_resource type="Texture2D" uid="uid://dtttymsvkrv1d" path="res://texture/materuo/grass_transition.png" id="3_pi41c"]
 [ext_resource type="PackedScene" uid="uid://dijr8wd680scd" path="res://scene/décoration/tree/tree.tscn" id="4_3xjyb"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kfc0g"]
+load_path = "res://.godot/imported/grass_transition.png-3d9c0f757542bf1e5c827e1bd34da2c9.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2cn2"]
-texture = ExtResource("3_pi41c")
+texture = SubResource("CompressedTexture2D_kfc0g")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

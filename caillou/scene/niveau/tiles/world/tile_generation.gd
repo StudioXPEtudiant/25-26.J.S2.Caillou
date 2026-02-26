@@ -2,6 +2,7 @@ extends Node2D
 
 
 var central1 = preload("res://scene/niveau/tiles/central1/central1.tscn")
+var central2 = preload("res://scene/niveau/tiles/central2/central2.tscn")
 
 var tileNumber = 0
 var tile
@@ -28,12 +29,17 @@ func _process(delta):
 
 
 func generation():
-	tileNumber = rng.randi_range(1, 1)
+	tileNumber = rng.randi_range(1, 2)
 	position.x = X * 1128
 	position.y = Y * 1128
 	if tileNumber == 1 :
-		tile = central1.instantiate()
+		tile = central1.new()
 		add_child(tile)
+		
 		print("central1 generated in X", X, "Y", Y)
+	if tileNumber == 2 :
+		tile = central2.instantiate()
+		add_child(tile)
+		print("central2 generated in X", X, "Y", Y)
 	
 	X += 1
