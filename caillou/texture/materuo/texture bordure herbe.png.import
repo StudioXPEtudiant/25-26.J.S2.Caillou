@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd8sfv3ja7lf6"
-path="res://.godot/imported/shop.png-f6aaf41cc93749f2868eff76c0ab2061.ctex"
+uid="uid://chy87lx3w4vte"
+path="res://.godot/imported/texture bordure herbe.png-09e0827fa9e6542ce42281a551bc6ddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/materuo/shop.png"
-dest_files=["res://.godot/imported/shop.png-f6aaf41cc93749f2868eff76c0ab2061.ctex"]
+source_file="res://texture/materuo/texture bordure herbe.png"
+dest_files=["res://.godot/imported/texture bordure herbe.png-09e0827fa9e6542ce42281a551bc6ddd.ctex"]
 
 [params]
 
