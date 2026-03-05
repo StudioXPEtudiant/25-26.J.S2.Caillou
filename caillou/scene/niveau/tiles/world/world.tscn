@@ -9,7 +9,7 @@
 [node name="tilemap" type="Node2D" parent="."]
 script = ExtResource("1_ouf1e")
 
-[node name="generater" type="Node2D" parent="tilemap"]
+[node name="generator" type="Node2D" parent="tilemap"]
 script = ExtResource("2_i0oeq")
 
 [node name="tile" type="Node2D" parent="tilemap"]

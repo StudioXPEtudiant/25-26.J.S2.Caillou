@@ -25,18 +25,6 @@ func tilemapTypeGiving():
 	if tilemapType == "NA" :
 		if name == "template" :
 			tilemapType = "template"
-		if name == "central1" || name == "central2" :
-			tilemapType = "normal"
-			path_U = Vector3(1, 1, 1)
-			path_R = Vector3(1, 1, 1)
-			path_D = Vector3(1, 1, 1)
-			path_L = Vector3(1, 1, 1)
-		if name == "010_010_010_010_1" :
-			tilemapType = "normal"
-			path_U = Vector3(0, 1, 0)
-			path_R = Vector3(0, 1, 0)
-			path_D = Vector3(0, 1, 0)
-			path_L = Vector3(0, 1, 0)
 	if tilemapType == "NA" :
 		print("tylemap type non donné")
 	else :
