@@ -12,6 +12,4 @@ script = ExtResource("1_ouf1e")
 [node name="generator" type="Node2D" parent="tilemap"]
 script = ExtResource("2_i0oeq")
 
-[node name="tile" type="Node2D" parent="tilemap"]
-
 [node name="Player" parent="." instance=ExtResource("3_nat6k")]
