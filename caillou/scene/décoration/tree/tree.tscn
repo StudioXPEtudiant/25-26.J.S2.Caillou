@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dijr8wd680scd"]
+[gd_scene load_steps=5 format=3 uid="uid://dijr8wd680scd"]
 
+[ext_resource type="Script" path="res://scene/décoration/tree/tree.gd" id="1_hqurj"]
 [ext_resource type="Texture2D" uid="uid://d35dh52a3gpn6" path="res://texture/tree/arbre base.png" id="1_mxl2q"]
-[ext_resource type="Script" path="res://scene/décoration/tree/tree_generator.gd" id="1_ogwgx"]
-[ext_resource type="Script" path="res://scene/décoration/tree/treeVisiblity.gd" id="3_cg5fn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co2u5"]
 size = Vector2(28, 45)
@@ -11,8 +10,9 @@ size = Vector2(28, 45)
 radius = 76.0
 height = 406.0
 
-[node name="Tree" type="Node2D"]
-script = ExtResource("1_ogwgx")
+[node name="Tree" type="Node2D" node_paths=PackedStringArray("oppacityArea")]
+script = ExtResource("1_hqurj")
+oppacityArea = NodePath("visibilityArea")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -23,7 +23,6 @@ shape = SubResource("RectangleShape2D_co2u5")
 [node name="arbre1" type="Sprite2D" parent="."]
 position = Vector2(195, -190)
 texture = ExtResource("1_mxl2q")
-script = ExtResource("3_cg5fn")
 
 [node name="visibilityArea" type="Area2D" parent="."]
 
@@ -31,4 +30,4 @@ script = ExtResource("3_cg5fn")
 position = Vector2(0, -180)
 shape = SubResource("CapsuleShape2D_gfdfw")
 
-[connection signal="body_entered" from="visibilityArea" to="arbre1" method="visibility"]
+[connection signal="body_entered" from="visibilityArea" to="." method="tree_oppacity"]

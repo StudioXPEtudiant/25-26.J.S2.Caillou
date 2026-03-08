@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dny3qvveuv86j"]
 
-[ext_resource type="Script" path="res://scene/niveau/tiles/template/tilemap.gd" id="1_1ryti"]
+[ext_resource type="Script" path="res://scene/niveau/tiles/tilemap.gd" id="1_1ryti"]
 [ext_resource type="Texture2D" uid="uid://bab2gsotfw1ny" path="res://texture/materuo/materiaux_de_base.png" id="2_2vrnl"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kfc0g"]

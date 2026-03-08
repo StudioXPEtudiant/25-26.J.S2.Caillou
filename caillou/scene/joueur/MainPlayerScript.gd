@@ -77,7 +77,7 @@ func _physics_process(delta):
 	#////////
 	if velocity.y < 0 :
 		animation.speed_scale = animationSpeed * 20
-		if animation != find_child("AnimationUpWalk") :
+		if animation != find_child("AnimationUpWalk") and velocity.x == 0 :
 			animation.stop()
 			animation.hide()
 			animation = find_child("AnimationUpWalk")
@@ -86,7 +86,7 @@ func _physics_process(delta):
 	#////////
 	if velocity.y > 0 :
 		animation.speed_scale = animationSpeed * 20
-		if animation != find_child("AnimationDownWalk") :
+		if animation != find_child("AnimationDownWalk") and velocity.x == 0 :
 			animation.stop()
 			animation.hide()
 			animation = find_child("AnimationDownWalk")
@@ -95,7 +95,7 @@ func _physics_process(delta):
 	#////////
 	if velocity.x > 0 :
 		animation.speed_scale = animationSpeed * 7
-		if animation != find_child("AnimationRightWalk") :
+		if animation != find_child("AnimationRightWalk") and velocity.y == 0 :
 			animation.stop()
 			animation.hide()
 			animation = find_child("AnimationRightWalk")
@@ -104,7 +104,7 @@ func _physics_process(delta):
 	#////////
 	if velocity.x < 0 :
 		animation.speed_scale = animationSpeed * 7
-		if animation != find_child("AnimationLeftWalk") :
+		if animation != find_child("AnimationLeftWalk") and velocity.y == 0 :
 			animation.stop()
 			animation.hide()
 			animation = find_child("AnimationLeftWalk")
